@@ -16,7 +16,7 @@ function main() {
 	var object_array=[];
 	
 	var s = new Spotter("twitter.search", 
-						{q: "giants", period:150},
+						{q: "bieber", period:150},
 						{buffer:true, bufferTimeout:1000}
 					    );
 					   
