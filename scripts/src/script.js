@@ -10,16 +10,18 @@ function main() {
     //your tasks
 
     //1. Create a spotter and get it to insert tweets into the DOM
+	//var limit = false;
 	
 	var count = 0;
 	var object_array=[];
-	//var limit = false;
+	
 	var s = new Spotter("twitter.search", 
 						{q: "giants", period:150},
 						{buffer:true, bufferTimeout:1000}
 					    );
 					   
 	s.register(function(tweet) {
+	count++;
 	
 	//$("#tweets").append("<p>"+tweet.text+"</p>");
 	
@@ -30,9 +32,6 @@ function main() {
 	$("#tweets").prepend("<p>"+profile_image+tweet.text+"</p>");
 	profile_image.slideDown();*/
 	//"<li style='display:none;color:blue;background-color:white;'>"
-	
-	
-	count++;
 	
 		/*if (count === 11)
 		{ if (limit === false)
